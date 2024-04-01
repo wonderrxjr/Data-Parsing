@@ -8,6 +8,8 @@ File layout
     * Analyzing data about the Indiana Hoosiers
 * indiana.csv
     * Total game stats for Indiana (might be renamed)
+* purdue_data.ipynb
+    * Analyzing data about the Purdue Boilermakers
 * purdue_data.py
     * Analyzing data about the Purdue Boilermakers
 * purdue.csv
