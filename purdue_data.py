@@ -77,3 +77,27 @@ axs[1, 1].set_title('Total Free Throw Attempts')
 
 plt.tight_layout()
 plt.show()
+
+purdue_foul_diff = data['PF'] - data['OPF']
+
+# Create a bar plot of Purdue foul differential
+plt.bar(data['Date'], purdue_foul_diff)
+plt.ylabel('Foul Differential')
+plt.title('Purdue Foul Differential')
+plt.xticks([])
+plt.tight_layout()
+plt.show()
+
+# Create a scatter plot of Purdue free throw attempts vs. Purdue points. Mark the wins with a green dot and the losses with a red dot
+colors = []
+for i in range(len(data)):
+    if 'W' in str(data['W/L'][i]):
+        colors.append('green')
+    else:
+        colors.append('red')
+plt.scatter(data['FTA'], data['Tm'], c=colors)
+plt.xlabel('Free Throw Attempts')
+plt.ylabel('Points')
+plt.title('Purdue Free Throw Attempts vs. Points')
+plt.tight_layout()
+plt.show()
